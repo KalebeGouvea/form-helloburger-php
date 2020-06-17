@@ -1,3 +1,32 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    position: fixed;
+    z-index: 1;
+    font-size: 24px;
+    margin-left: 28px;
+    margin-top: 20px;
+}
+
+.logo:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo:visited {
+    color: #ffffff;
+}
+
+.logo:hover {
+    color: #000000;
+}
+
+.logo:active {
+    color: #ffffff;
+}
+
 .esquerda {
     background-color: #D75441;
     height: 100vh;
@@ -13,15 +42,16 @@
 }
 
 .msg1 {
-    font-family: 'Roboto', sans-serif;
     color: #873226;
     font-weight: bold;
     font-size: 48px;
+    margin-bottom: 0px;
+    margin-top: 100px;
 }
 
 .msg2 {
-    font-family: 'Roboto', sans-serif;
     color: #873226;
     font-weight: bold;
     font-size: 64px;
+    margin-bottom: 0px;
 }
