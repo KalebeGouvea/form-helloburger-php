@@ -62,3 +62,13 @@ body {
     margin-bottom: 0px;
     margin-left: 13px;
 }
+
+h2 {
+    color: #D75441;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+label {
+    color: #FFFFFF;
+}
