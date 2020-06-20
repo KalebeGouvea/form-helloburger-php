@@ -40,7 +40,9 @@ body {
 .burger {
     width: 85%;
     position: relative;
-    bottom: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .msg1 {
