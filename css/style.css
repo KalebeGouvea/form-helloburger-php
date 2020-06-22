@@ -106,3 +106,17 @@ legend {
 .caixa:focus::placeholder {
     color: #FFFFFF;
 }
+
+.btn-laranja {
+    background-color: #D75441;
+    border-radius: 0;
+    border-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    width: 180px;
+    height: 40px;
+}
+
+.btn-laranja:hover {
+    background-color: #a53f2f;
+}
