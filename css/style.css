@@ -35,6 +35,10 @@ body {
 .direita {
     background-color: #252525;
     height: 100vh;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .burger {
@@ -71,8 +75,29 @@ h2 {
 
 label {
     color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 3px;
 }
 
 legend {
-    color: #FFFFFF;    
+    color: #FFFFFF;
+    font-weight: bold;    
+}
+
+.caixa {
+    background-color: #252525;
+    border: 2px solid #D75441;
+    height: 44px;
+    color: #D75441;
+}
+
+.caixa::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #D75441;
+    opacity: 1; /* Firefox */
+
+}
+
+.caixa:focus {
+    background-color: #252525;
+    border: 2px solid #FFFFFF;
 }
