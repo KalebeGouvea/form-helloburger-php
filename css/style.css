@@ -100,4 +100,9 @@ legend {
 .caixa:focus {
     background-color: #252525;
     border: 2px solid #FFFFFF;
+    color: #D75441;
+}
+
+.caixa:focus::placeholder {
+    color: #FFFFFF;
 }
