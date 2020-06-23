@@ -107,6 +107,10 @@ legend {
     color: #FFFFFF;
 }
 
+label.form-check-label {
+    font-weight: normal;
+}
+
 .btn-laranja {
     background-color: #D75441;
     border-radius: 0;
