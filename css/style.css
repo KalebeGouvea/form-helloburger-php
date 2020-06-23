@@ -52,7 +52,7 @@ body {
 .msg1 {
     color: #873226;
     font-weight: bold;
-    font-size: 54px;
+    font-size: 4.219vw;
     margin-bottom: 0px;
     margin-top: 110px;
     margin-left: 13px;
@@ -62,7 +62,7 @@ body {
 .msg2 {
     color: #873226;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 5.469vw;
     margin-bottom: 0px;
     margin-left: 13px;
 }
