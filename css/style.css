@@ -101,7 +101,7 @@ legend {
     background-color: #252525;
     border: 2px solid #FFFFFF;
     color: #D75441;
-}
+    box-shadow: none;
 
 .caixa:focus::placeholder {
     color: #FFFFFF;
