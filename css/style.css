@@ -124,3 +124,16 @@ label.form-check-label {
 .btn-laranja:hover {
     background-color: #a53f2f;
 }
+
+.btn-laranja:not(:disabled):not(.disabled).active, .btn-laranja:not(:disabled):not(.disabled):active, .show>.btn-laranja.dropdown-toggle {
+    color: #fff;
+    background-color: #a53f2f;
+    border-color: #D75441;
+}
+
+.btn-laranja:focus {
+    color: #fff;
+    background-color: #a53f2f;
+    border-color: #D75441;
+    box-shadow: 0 0 0 0.2rem rgba(255, 63, 38, 0.5);
+}
