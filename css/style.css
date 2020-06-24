@@ -142,3 +142,13 @@ label.form-check-label {
 .btn-laranja:not(:disabled):not(.disabled):active:focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 63, 38, 0.5);
 }
+
+@media (max-width: 767.98px) {
+    .esquerda, .direita {
+        height: 100%;
+    }
+
+    .direita {
+        padding: 10% 5% 10% 5%;
+    }
+}
