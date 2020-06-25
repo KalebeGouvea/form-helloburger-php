@@ -157,7 +157,7 @@ label.form-check-label {
     }
 
     .direita {
-        padding: 10% 5% 10% 5%;
+        padding: 24% 5% 10% 5%;
     }
 
     .esquerda {
@@ -167,8 +167,8 @@ label.form-check-label {
     .logo01 {
         background-color: #D75441;
         width: 100%;
-        padding-top: 2%;
-        padding-bottom: 2%;
+        padding-top: 4%;
+        padding-bottom: 4%;
         padding-left: 5%;
     }
 }
