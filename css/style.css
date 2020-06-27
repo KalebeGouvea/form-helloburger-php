@@ -14,6 +14,20 @@ body {
     margin: auto;
 }
 
+.esquerda {
+    background-color: #D75441;
+    width: 50%;
+}
+
+.direita {
+    background-color: #252525;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 0;
+    width: 50%;
+}
+
 /*.logo {
     position: fixed;
     z-index: 1;
@@ -47,18 +61,6 @@ body {
     color: #ffffff;
 }
 
-.esquerda {
-    background-color: #D75441;
-}
-
-.direita {
-    background-color: #252525;
-    padding-right: 5%;
-    padding-left: 5%;
-    padding-top: 2%;
-    padding-bottom: 0;
-}
-
 .burger {
     width: 80%;
     position: relative;
@@ -70,7 +72,7 @@ body {
 .msg1 {
     color: #873226;
     font-weight: bold;
-    font-size: 4.219vw;
+    font-size: 4vw;
     margin-bottom: 0px;
     margin-top: 110px;
     margin-left: 13px;
@@ -80,7 +82,7 @@ body {
 .msg2 {
     color: #873226;
     font-weight: bold;
-    font-size: 5.469vw;
+    font-size: 4.5vw;
     margin-bottom: 0px;
     margin-left: 13px;
 }
