@@ -2,6 +2,18 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.fundo {
+    background-color: #3E3E3E;
+    min-height: 100vh;
+    display: flex;
+}
+
+.bloco {
+    max-width: 950px;
+    display: flex;
+    margin: auto;
+}
+
 /*.logo {
     position: fixed;
     z-index: 1;
@@ -37,12 +49,10 @@ body {
 
 .esquerda {
     background-color: #D75441;
-    height: 100vh;
 }
 
 .direita {
     background-color: #252525;
-    height: 100vh;
     padding-right: 5%;
     padding-left: 5%;
     padding-top: 2%;
