@@ -16,7 +16,7 @@ body {
 
 .esquerda {
     background-color: #D75441;
-    width: 50%;
+    width: 45%;
 }
 
 .direita {
@@ -25,7 +25,7 @@ body {
     padding-left: 5%;
     padding-top: 2%;
     padding-bottom: 0;
-    width: 50%;
+    width: 55%;
 }
 
 /*.logo {
@@ -72,7 +72,7 @@ body {
 .msg1 {
     color: #873226;
     font-weight: bold;
-    font-size: 42px;
+    font-size: 40px;
     margin-bottom: 0px;
     margin-top: 110px;
     margin-left: 13px;
@@ -82,7 +82,7 @@ body {
 .msg2 {
     color: #873226;
     font-weight: bold;
-    font-size: 54px;
+    font-size: 52px;
     margin-bottom: 0px;
     margin-left: 13px;
 }
