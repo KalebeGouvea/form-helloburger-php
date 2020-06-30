@@ -158,24 +158,18 @@ label.form-check-label {
     box-shadow: 0 0 0 0.2rem rgba(255, 63, 38, 0.5);
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
+    
+    .conteudo {
+        display: none;    
+    }
+
+    .bloco {
+        flex-direction: column;
+    }
+
     .esquerda, .direita {
-        height: 100%;
+        width: auto;
     }
 
-    .direita {
-        padding: 24% 5% 10% 5%;
-    }
-
-    .esquerda {
-        display: none;
-    }
-
-    .logo01 {
-        background-color: #D75441;
-        width: 100%;
-        padding-top: 4%;
-        padding-bottom: 4%;
-        padding-left: 5%;
-    }
 }
