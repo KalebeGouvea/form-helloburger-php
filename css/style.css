@@ -172,4 +172,9 @@ label.form-check-label {
         width: auto;
     }
 
+    .logo01 {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
 }
