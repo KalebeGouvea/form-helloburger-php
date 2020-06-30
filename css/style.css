@@ -99,11 +99,12 @@ legend {
     font-weight: bold;    
 }
 
+
 .caixa {
     background-color: #252525;
     border: 2px solid #D75441;
     height: 44px;
-    color: #D75441;
+    color: #FFFFFF;
 }
 
 .caixa::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -115,7 +116,7 @@ legend {
 .caixa:focus {
     background-color: #252525;
     border: 2px solid #FFFFFF;
-    color: #D75441;
+    color: #FFFFFF;
     box-shadow: none;
 }
 
