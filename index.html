@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/abf89d820e.js" crossorigin="anonymous"></script>
+    <script language="JavaScript" type="text/javascript" src="js/cidades-estados-utf8.js"></script>
 
     <title>Hello Burger - Cadastro</title>
 </head>
@@ -96,17 +97,21 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEstado">ESTADO</label>
-                            <select id="inputEstado" class="form-control caixa">
-                                <option selected>Selecione o seu estado</option>
-                            </select>
+                            <select id="inputEstado" class="form-control caixa"></select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputMunicipio">MUNICÍPIO</label>
-                            <select id="inputMunicipio" class="form-control caixa">
-                                <option selected>Selecione o seu município</option>
-                            </select>
+                            <select id="inputMunicipio" class="form-control caixa"></select>
                         </div>
                     </div>
+                    <script language="JavaScript" type="text/javascript" charset="utf-8">
+                        new dgCidadesEstados({
+                          cidade: document.getElementById('inputMunicipio'),
+                          estado: document.getElementById('inputEstado'),
+                          estadoVal: 'Selecione um estado',
+                          cidadeVal: 'Selecione uma cidade'
+                        })
+                      </script>
 
                     <div class="form-group">
                         <div class="form-check">
