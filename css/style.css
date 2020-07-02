@@ -128,6 +128,10 @@ label.form-check-label {
     font-weight: normal;
 }
 
+.radio-group {
+    padding-top: 6px;
+}
+
 .radio {
     display: inline-block;
     vertical-align: middle;
@@ -153,7 +157,7 @@ label.form-check-label {
     display: block;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 2px;
 }
 
 .radio span:after {
