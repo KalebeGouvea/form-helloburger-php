@@ -128,6 +128,52 @@ label.form-check-label {
     font-weight: normal;
 }
 
+.radio {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFFFFF;
+    position: relative;
+    padding-left: 25px;
+    font-weight: normal;
+}
+
+.radio + .radio {
+    margin-left: 15px;
+}
+
+.radio input[type="radio"] {
+    display: none;
+}
+
+.radio span {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid #D75441;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.radio span:after {
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #D75441;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    border-radius: 50%;
+    transition: 300ms ease-in-out 0s;
+}
+
+.radio input[type="radio"]:checked ~ span:after {
+    transform: translate(-50%,-50%) scale(1);
+}
+
 .btn-laranja {
     background-color: #D75441;
     border-radius: 0;
