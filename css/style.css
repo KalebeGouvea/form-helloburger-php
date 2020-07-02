@@ -173,7 +173,7 @@ label.form-check-label {
     top: 50%;
     transform: translate(-50%,-50%) scale(0);
     border-radius: 50%;
-    transition: 300ms ease-in-out 0s;
+    transition: .2s ease-in-out 0s;
 }
 
 .radio input[type="radio"]:checked ~ span:after {
