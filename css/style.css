@@ -2,6 +2,8 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/*------------Layout da pagina--------------*/
+
 .fundo {
     background-color: #3E3E3E;
     min-height: 100vh;
@@ -25,13 +27,8 @@ body {
     width: 55%;
 }
 
-/*.logo {
-    position: fixed;
-    z-index: 1;
-    font-size: 24px;
-    margin-left: 28px;
-    margin-top: 16px;
-}*/
+/*------------Lado Esquerdo--------------*/
+/*------------Estilo da logo--------------*/
 
 .logo01 {
     font-size: 24px;
@@ -64,6 +61,8 @@ body {
     margin-right: auto;
 }
 
+/*-------Estilo das mensagens do lado esquerdo---------*/
+
 .msg1 {
     color: #873226;
     font-weight: bold;
@@ -82,6 +81,9 @@ body {
     margin-left: 13px;
 }
 
+/*------------Lado Direito--------------*/
+/*------------Estilo dos titulos--------------*/
+
 h2 {
     color: #D75441;
     font-size: 24px;
@@ -94,11 +96,17 @@ label {
     margin-bottom: 3px;
 }
 
+label.form-check-label {
+    font-weight: normal;
+}
+
 legend {
     color: #FFFFFF;
     font-weight: bold;    
 }
 
+/*------------Radio Button--------------*/
+/*------------Estilo dos inputs--------------*/
 
 .caixa {
     background-color: #252525;
@@ -122,10 +130,6 @@ legend {
 
 .caixa:focus::placeholder {
     color: #FFFFFF;
-}
-
-label.form-check-label {
-    font-weight: normal;
 }
 
 /*------------Radio Button--------------*/
@@ -180,7 +184,7 @@ label.form-check-label {
     transform: translate(-50%,-50%) scale(1);
 }
 
-/*---------------Checkbox----------------*/
+/*-------------W3 Schools Checkbox--------------*/
 
 /* The container */
 .checkofertas {
@@ -250,7 +254,7 @@ label.form-check-label {
     transform: rotate(45deg);
   }  
 
-/*----------------Button-----------------*/
+/*--------------Submit Button---------------*/
 
 .btn-laranja {
     background-color: #D75441;
@@ -283,10 +287,14 @@ label.form-check-label {
     box-shadow: 0 0 0 0.2rem rgba(255, 63, 38, 0.5);
 }
 
+/*--------------Date input icon---------------*/
+
 ::-webkit-calendar-picker-indicator {
     /*filter: invert(1);*/
     opacity: 0;
 }
+
+/*--------------Layout telas menores---------------*/
 
 @media (max-width: 991.98px) {
     
