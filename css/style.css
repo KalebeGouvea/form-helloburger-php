@@ -152,7 +152,11 @@ legend {
 }
 
 .radio input[type="radio"] {
-    display: none;
+    /*display: none;*/
+    opacity: 0;
+    position: absolute;
+    left: 3px;
+    top: 6px;
 }
 
 .radio span {
