@@ -57,17 +57,17 @@
 
                     <div class="form-group">
                         <label for="inputEmail">EMAIL</label>
-                        <input type="email" class="form-control caixa" id="inputEmail" name="email" placeholder="Digite o seu e-mail">
+                        <input type="email" class="form-control caixa" id="inputEmail" name="email" placeholder="Digite o seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Insira o endereço de email no formato email@dominio.com">
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputSenha">SENHA</label>
-                            <input type="password" class="form-control caixa" id="inputSenha" name="pwd" placeholder="Digite uma senha">
+                            <input type="password" class="form-control caixa" id="inputSenha" name="pwd" placeholder="Digite uma senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="A senha deve conter pelo menos um número, uma letra maiuscula, uma letra minuscula e pelo menos 6 caracteres">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputTelefone">TELEFONE</label>
-                            <input type="text" class="form-control caixa" id="inputTelefone" name="tel" placeholder="Digite o seu telefone">
+                            <input type="tel" class="form-control caixa" id="inputTelefone" name="fone" placeholder="Digite o seu telefone">
                         </div>
                     </div>
 
