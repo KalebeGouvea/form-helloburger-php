@@ -84,7 +84,7 @@ body {
 /*------------Lado Direito--------------*/
 /*------------Estilo dos titulos--------------*/
 
-h2 {
+.t1 {
     color: #D75441;
     font-size: 24px;
     font-weight: bold;
