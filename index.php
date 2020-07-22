@@ -35,7 +35,7 @@
             <div class="direita">
                 <h1 class="t1">Registre-se</h1>
 
-                <form action="form.php" method="post">
+                <form action= <?php echo htmlspecialchars("form.php")?> method="post">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputNome">NOME</label>
