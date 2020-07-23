@@ -39,41 +39,41 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputNome">NOME</label>
-                            <input type="text" class="form-control caixa" id="inputNome" name="nome" placeholder="Digite o seu nome" required>
+                            <input type="text" class="form-control caixa" id="inputNome" name="nome" placeholder="Digite o seu nome">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputSobrenome">SOBRENOME</label>
-                            <input type="text" class="form-control caixa" id="inputSobrenome" name="snome" placeholder="Digite o seu sobrenome" required>
+                            <input type="text" class="form-control caixa" id="inputSobrenome" name="snome" placeholder="Digite o seu sobrenome">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="inputEmail">EMAIL</label>
-                        <input type="email" class="form-control caixa" id="inputEmail" name="email" placeholder="Digite o seu e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Insira o endereço de email no formato email@dominio.com" required>
+                        <input type="email" class="form-control caixa" id="inputEmail" name="email" placeholder="Digite o seu e-mail">
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputSenha">SENHA</label>
-                            <input type="password" class="form-control caixa" id="inputSenha" name="pwd" placeholder="Digite uma senha" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="A senha deve conter pelo menos um número, uma letra maiuscula, uma letra minuscula e pelo menos 6 caracteres" required>
+                            <input type="password" class="form-control caixa" id="inputSenha" name="pwd" placeholder="Digite uma senha">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputTelefone">TELEFONE</label>
-                            <input type="tel" class="form-control caixa" id="inputTelefone" name="fone" placeholder="(99) 99999-9999" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" data-mask="(99) 99999-9999" required>
+                            <input type="tel" class="form-control caixa" id="inputTelefone" name="fone" placeholder="(99) 99999-9999" maxlength="15" data-mask="(99) 99999-9999">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputData">DATA DE NASCIMENTO</label>
-                            <input type="date" class="form-control caixa" id="inputData" name="bday" required>
+                            <input type="date" class="form-control caixa" id="inputData" name="bday">
                         </div>
                         <div class="form-group col-md-6">
                             <legend class="col-form-label pt-0">SEXO</legend>
 
                             <div class="radio-group">
                                 <label class="radio">
-                                    <input type="radio" value="masculino" name="sex" required>Masculino
+                                    <input type="radio" value="masculino" name="sex">Masculino
                                     <span></span>
                                 </label>
                                 <label class="radio">
@@ -87,17 +87,17 @@
                     
                     <div class="form-group">
                         <label for="inputEndereco">ENDEREÇO</label>
-                        <input type="text" class="form-control caixa" id="inputEndereco" name="end" placeholder="Digite o seu endereço" required>
+                        <input type="text" class="form-control caixa" id="inputEndereco" name="end" placeholder="Digite o seu endereço">
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEstado">ESTADO</label>
-                            <select id="inputEstado" name="estado" class="form-control caixa" required></select>
+                            <select id="inputEstado" name="estado" class="form-control caixa"></select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputCidade">CIDADE</label>
-                            <select id="inputCidade" name="cidade" class="form-control caixa" required></select>
+                            <select id="inputCidade" name="cidade" class="form-control caixa"></select>
                         </div>
                     </div>
                     <script language="JavaScript" type="text/javascript" charset="utf-8">
