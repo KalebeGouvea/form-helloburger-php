@@ -25,4 +25,14 @@ function test_input($data) {
 }
 // Fim da validação das variáveis POST
 
-echo $_POST["nome"];
+echo $_POST["nome"]. "<br>";
+echo $_POST["snome"]. "<br>";
+echo $_POST["email"]. "<br>";
+echo $_POST["pwd"]. "<br>";
+echo $_POST["fone"]. "<br>";
+echo $_POST["bday"]. "<br>";
+echo $_POST["sex"]. "<br>";
+echo $_POST["end"]. "<br>";
+echo $_POST["estado"]. "<br>";
+echo $_POST["cidade"]. "<br>";
+echo $_POST["ofertas"]. "<br>";

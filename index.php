@@ -111,7 +111,8 @@
 
                     <div class="form-group">
                         <label class="checkofertas">Aceito receber ofertas por e-mail
-                            <input type="checkbox" name="ofertas">
+                            <input type="hidden" value="Nao" name="ofertas">
+                            <input type="checkbox" value="Sim" name="ofertas">
                             <span class="checkmark"></span>
                         </label>
                     </div>
