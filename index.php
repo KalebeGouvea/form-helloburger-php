@@ -1,3 +1,5 @@
+<?php include 'form.php';?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -39,17 +41,17 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputNome">NOME</label>
-                            <input type="text" class="form-control caixa" id="inputNome" name="nome" placeholder="Digite o seu nome">
+                            <input type="text" class="form-control caixa" id="inputNome" name="nome" placeholder="Digite o seu nome" value="<?php echo $nome;?>">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputSobrenome">SOBRENOME</label>
-                            <input type="text" class="form-control caixa" id="inputSobrenome" name="snome" placeholder="Digite o seu sobrenome">
+                            <input type="text" class="form-control caixa" id="inputSobrenome" name="snome" placeholder="Digite o seu sobrenome" value="<?php echo $snome;?>">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="inputEmail">EMAIL</label>
-                        <input type="email" class="form-control caixa" id="inputEmail" name="email" placeholder="Digite o seu e-mail">
+                        <input type="text" class="form-control caixa" id="inputEmail" name="email" placeholder="Digite o seu e-mail">
                     </div>
 
                     <div class="form-row">

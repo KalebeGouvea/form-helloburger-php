@@ -157,15 +157,3 @@ function test_input($data) {
   return $data;
 }
 // Fim da validação das variáveis POST
-
-echo $nome. "<br>";
-echo $snome. "<br>";
-echo $email. "<br>";
-echo $pwd. "<br>";
-echo $fone. "<br>";
-echo $bday. "<br>";
-echo $sex. "<br>";
-echo $end. "<br>";
-echo $estado. "<br>";
-echo $cidade. "<br>";
-echo $ofertas. "<br>";
