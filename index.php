@@ -68,7 +68,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputData">DATA DE NASCIMENTO</label>
-                            <input type="date" class="form-control caixa" id="inputData" name="bday" value="<?php echo empty($_SESSION['bday']) ? '' : $_SESSION['bday'];?>">
+                            <input type="date" class="form-control caixa" id="inputData" name="bday" value="<?php echo empty($_SESSION['bday']) ? '' : date("Y-m-d", strtotime(str_replace('/', '-', $_SESSION['bday'])));?>">
                         </div>
                         <div class="form-group col-md-6">
                             <legend class="col-form-label pt-0">SEXO</legend>
