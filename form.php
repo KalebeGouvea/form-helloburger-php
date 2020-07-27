@@ -1,7 +1,8 @@
 <?php
 
+session_start();
 // Inicio da validação das variáveis POST
-$nome = $snome = $email = $pwd = $fone = $bday = $sex = $end = $estado = $cidade = $ofertas = "";
+//$nome = $snome = $email = $pwd = $fone = $bday = $sex = $end = $estado = $cidade = $ofertas = "";
 //$nomeErr = $snomeErr = $emailErr = $pwdErr = $foneErr = $bdayErr = $sexErr = $endErr = $estadoErr = $cidadeErr = $ofertasErr = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -10,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $erro['nomeErr'] = "Nome é necessário";
   } 
   else {
-    $nome = test_input($_POST["nome"]);
-    if (!preg_match("/^[a-zA-Z ]*$/",$nome)) {
+    $_SESSION['nome'] = test_input($_POST["nome"]);
+    if (!preg_match("/^[a-zA-Z ]*$/",$_SESSION['nome'])) {
       $erro['nomeErr'] = "O nome deve conter apenas letras e espaços";
     }
   }
@@ -20,8 +21,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $erro['snomeErr'] = "Sobrenome é necessário";
   } 
   else {
-    $snome = test_input($_POST["snome"]);
-    if (!preg_match("/^[a-zA-Z ]*$/",$snome)) {
+    $_SESSION['snome'] = test_input($_POST["snome"]);
+    if (!preg_match("/^[a-zA-Z ]*$/",$_SESSION['snome'])) {
       $erro['snomeErr'] = "O sobrenome deve conter apenas letras e espaços";
     }
   }
@@ -30,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $erro['emailErr'] = "Email é necessário";
   } 
   else {
-    $email = test_input($_POST["email"]);
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $_SESSION['email'] = test_input($_POST["email"]);
+    if (!filter_var($_SESSION['email'], FILTER_VALIDATE_EMAIL)) {
       $erro['emailErr'] = "Formato de email inválido";
     }
   }
@@ -40,17 +41,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $erro['pwdErr'] = "Senha é necessária";
   }
   else {
-    $pwd = test_input($_POST["pwd"]);
+    $_SESSION['pwd'] = test_input($_POST["pwd"]);
     if (strlen($_POST["pwd"]) < 6) {
       $erro['pwdErr'] = "Sua senha deve conter no mínimo 6 caracteres!";
     }
-    elseif(!preg_match("#[0-9]+#",$pwd)) {
+    elseif(!preg_match("#[0-9]+#",$_SESSION['pwd'])) {
       $erro['pwdErr'] = "Sua senha deve conter no mínimo 1 número!";
     }
-    elseif(!preg_match("#[A-Z]+#",$pwd)) {
+    elseif(!preg_match("#[A-Z]+#",$_SESSION['pwd'])) {
       $erro['pwdErr'] = "Sua senha deve conter no mínimo 1 letra maiúscula!";
     }
-    elseif(!preg_match("#[a-z]+#",$pwd)) {
+    elseif(!preg_match("#[a-z]+#",$_SESSION['pwd'])) {
       $erro['pwdErr'] = "Sua senha deve conter no mínimo 1 letra minúscula!";
     }
   }
@@ -59,8 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $erro['foneErr'] = "Número de telefone é necessário";
   } 
   else {
-    $fone = test_input($_POST["fone"]);
-    if (!preg_match("/\(?\d{2}\)?\s?\d{5}\-?\d{4}/",$fone)) {
+    $_SESSION['fone'] = test_input($_POST["fone"]);
+    if (!preg_match("/\(?\d{2}\)?\s?\d{5}\-?\d{4}/",$_SESSION['fone'])) {
       $erro['foneErr'] = "Número de telefone inválido";
     }
   }
@@ -69,17 +70,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $erro['bdayErr'] = "Data de nascimento é necessária";
   }
   else {
-    $bday = test_input($_POST["bday"]);
-    $bday = date("d/m/Y", strtotime($bday));
-    if (strlen($bday) < 8) {
+    $_SESSION['bday'] = test_input($_POST["bday"]);
+    $_SESSION['bday'] = date("d/m/Y", strtotime($_SESSION['bday']));
+    if (strlen($_SESSION['bday']) < 8) {
       $erro['bdayErr'] = "Data de nascimento inválida";
     }
     else{
       // verifica se a data possui
       // a barra (/) de separação
-      if(strpos($bday, "/") !== FALSE){
+      if(strpos($_SESSION['bday'], "/") !== FALSE){
           //
-          $partes = explode("/", $bday);
+          $partes = explode("/", $_SESSION['bday']);
           // pega o dia da data
           $dia = $partes[0];
           // pega o mês da data
@@ -108,46 +109,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $erro['sexErr'] = "Sexo é necessário";
   } 
   else {
-    $sex = test_input($_POST["sex"]);
+    $_SESSION['sex'] = test_input($_POST["sex"]);
   }
 //Validar endereço
   if (empty($_POST["end"])) {
     $erro['endErr'] = "Endereço é necessário";
   } 
   else {
-    $end = test_input($_POST["end"]);
+    $_SESSION['end'] = test_input($_POST["end"]);
   }
 //Validar estado
   if (empty($_POST["estado"])) {
     $erro['estadoErr'] = "Estado é necessário";
   }
   else {
-    $estado = test_input($_POST["estado"]);
+    $_SESSION['estado'] = test_input($_POST["estado"]);
   }
 //Validar cidade
   if (empty($_POST["cidade"])) {
     $erro['cidadeErr'] = "Cidade é necessária";
   } 
   else {
-    $cidade = test_input($_POST["cidade"]);
+    $_SESSION['cidade'] = test_input($_POST["cidade"]);
   }
 //Validar ofertas
-  if (empty($_POST["end"])) {
+  if (empty($_POST["ofertas"])) {
     $erro['ofertasErr'] = "O campo ofertas é necessário";
   } 
   else {
-    $ofertas = test_input($_POST["ofertas"]);
+    $_SESSION['ofertas'] = test_input($_POST["ofertas"]);
   }
 
-}
-
-$msg = "";
-
-if (isset($erro)){
-  foreach ($erro as $x => $x_valor) {
-    $msg = $msg .$x_valor. "\\n";
-  }
-  echo "<script>alert('$msg');window.location = 'index.php';</script>";
 }
 
 function test_input($data) {
@@ -156,4 +148,13 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+
+$msg = "";
+if (isset($erro)){
+  foreach ($erro as $x => $x_valor) {
+    $msg = $msg .$x_valor. "\\n";
+  }
+  echo "<script>alert('$msg');window.location = 'index.php';</script>";
+}
+
 // Fim da validação das variáveis POST

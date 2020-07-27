@@ -1,4 +1,4 @@
-<?php include 'form.php';?>
+<?php session_start();?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -41,45 +41,45 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputNome">NOME</label>
-                            <input type="text" class="form-control caixa" id="inputNome" name="nome" placeholder="Digite o seu nome" value="<?php echo $nome;?>">
+                            <input type="text" class="form-control caixa" id="inputNome" name="nome" placeholder="Digite o seu nome" value="<?php echo empty($_SESSION['nome']) ? '' : $_SESSION['nome'];?>">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputSobrenome">SOBRENOME</label>
-                            <input type="text" class="form-control caixa" id="inputSobrenome" name="snome" placeholder="Digite o seu sobrenome" value="<?php echo $snome;?>">
+                            <input type="text" class="form-control caixa" id="inputSobrenome" name="snome" placeholder="Digite o seu sobrenome" value="<?php echo empty($_SESSION['snome']) ? '' : $_SESSION['snome'];?>">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="inputEmail">EMAIL</label>
-                        <input type="text" class="form-control caixa" id="inputEmail" name="email" placeholder="Digite o seu e-mail">
+                        <input type="text" class="form-control caixa" id="inputEmail" name="email" placeholder="Digite o seu e-mail" value="<?php echo empty($_SESSION['email']) ? '' : $_SESSION['email'];?>">
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputSenha">SENHA</label>
-                            <input type="password" class="form-control caixa" id="inputSenha" name="pwd" placeholder="Digite uma senha">
+                            <input type="password" class="form-control caixa" id="inputSenha" name="pwd" placeholder="Digite uma senha" value="<?php echo empty($_SESSION['pwd']) ? '' : $_SESSION['pwd'];?>">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputTelefone">TELEFONE</label>
-                            <input type="tel" class="form-control caixa" id="inputTelefone" name="fone" placeholder="(99) 99999-9999" maxlength="15" data-mask="(99) 99999-9999">
+                            <input type="tel" class="form-control caixa" id="inputTelefone" name="fone" placeholder="(99) 99999-9999" maxlength="15" data-mask="(99) 99999-9999"value="<?php echo empty($_SESSION['fone']) ? '' : $_SESSION['fone'];?>">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputData">DATA DE NASCIMENTO</label>
-                            <input type="date" class="form-control caixa" id="inputData" name="bday">
+                            <input type="date" class="form-control caixa" id="inputData" name="bday" value="<?php echo empty($_SESSION['bday']) ? '' : $_SESSION['bday'];?>">
                         </div>
                         <div class="form-group col-md-6">
                             <legend class="col-form-label pt-0">SEXO</legend>
 
                             <div class="radio-group">
                                 <label class="radio">
-                                    <input type="radio" value="masculino" name="sex">Masculino
+                                    <input type="radio" value="masculino" name="sex" <?php echo (isset($_SESSION['sex']) && $_SESSION['sex']=='masculino') ? 'checked' : null;?>>Masculino
                                     <span></span>
                                 </label>
                                 <label class="radio">
-                                    <input type="radio" value="feminino" name="sex">Feminino
+                                    <input type="radio" value="feminino" name="sex" <?php echo (isset($_SESSION['sex']) && $_SESSION['sex']=='feminino') ? 'checked' : null;?>>Feminino
                                     <span></span>
                                 </label>
                             </div>
@@ -89,17 +89,17 @@
                     
                     <div class="form-group">
                         <label for="inputEndereco">ENDEREÇO</label>
-                        <input type="text" class="form-control caixa" id="inputEndereco" name="end" placeholder="Digite o seu endereço">
+                        <input type="text" class="form-control caixa" id="inputEndereco" name="end" placeholder="Digite o seu endereço" value="<?php echo empty($_SESSION['end']) ? '' : $_SESSION['end'];?>">
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEstado">ESTADO</label>
-                            <select id="inputEstado" name="estado" class="form-control caixa"></select>
+                            <select id="inputEstado" name="estado" class="form-control caixa" value="<?php echo empty($_SESSION['estado']) ? '' : $_SESSION['estado'];?>"></select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputCidade">CIDADE</label>
-                            <select id="inputCidade" name="cidade" class="form-control caixa"></select>
+                            <select id="inputCidade" name="cidade" class="form-control caixa" value="<?php echo empty($_SESSION['cidade']) ? '' : $_SESSION['cidade'];?>"></select>
                         </div>
                     </div>
                     <script language="JavaScript" type="text/javascript" charset="utf-8">
@@ -113,8 +113,8 @@
 
                     <div class="form-group">
                         <label class="checkofertas">Aceito receber ofertas por e-mail
-                            <input type="hidden" value="Nao" name="ofertas">
-                            <input type="checkbox" value="Sim" name="ofertas">
+                            <input type="hidden" value="Nao" name="ofertas" <?php echo (isset($_SESSION['ofertas']) && $_SESSION['ofertas']=='Nao') ? 'checked' : null;?>>
+                            <input type="checkbox" value="Sim" name="ofertas" <?php echo (isset($_SESSION['ofertas']) && $_SESSION['ofertas']=='Sim') ? 'checked' : null;?>>
                             <span class="checkmark"></span>
                         </label>
                     </div>
