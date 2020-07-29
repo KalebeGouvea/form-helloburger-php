@@ -61,14 +61,14 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputTelefone">TELEFONE</label>
-                            <input type="tel" class="form-control caixa" id="inputTelefone" name="fone" placeholder="(99) 99999-9999" maxlength="15" data-mask="(99) 99999-9999"value="<?php echo empty($_SESSION['fone']) ? '' : $_SESSION['fone'];?>">
+                            <input type="tel" class="form-control caixa" id="inputTelefone" name="fone" placeholder="(99) 99999-9999" maxlength="15" data-mask="(99) 99999-9999" value="<?php echo empty($_SESSION['fone']) ? '' : $_SESSION['fone'];?>">
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputData">DATA DE NASCIMENTO</label>
-                            <input type="date" class="form-control caixa" id="inputData" name="bday" value="<?php echo empty($_SESSION['bday']) ? '' : date("Y-m-d", strtotime(str_replace('/', '-', $_SESSION['bday'])));?>">
+                            <input type="tel" class="form-control caixa" id="inputData" name="bday" placeholder="dd/mm/aaaa" data-mask="99/99/9999" value="<?php echo empty($_SESSION['bday']) ? '' : $_SESSION['bday'];?>">
                         </div>
                         <div class="form-group col-md-6">
                             <legend class="col-form-label pt-0">SEXO</legend>
