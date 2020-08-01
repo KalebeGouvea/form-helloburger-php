@@ -168,5 +168,7 @@ if (isset($erro)){
   }
   echo "<script>alert('$msg');window.location = 'index.php';</script>";
 }
-
+else {
+  echo "<script>window.location = 'src/connect.php';</script>";
+}
 // Fim da validação das variáveis POST
