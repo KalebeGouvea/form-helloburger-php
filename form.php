@@ -164,11 +164,14 @@ function test_input($data) {
 $msg = "";
 if (isset($erro)){
   foreach ($erro as $x => $x_valor) {
-    $msg = $msg .$x_valor. "\\n";
+    $msg = $msg. "<span>$x_valor.</span><br>";
   }
-  echo "<script>alert('$msg');window.location = 'index.php';</script>";
+  $_SESSION['erro'] = $msg;
+  $_SESSION['showModal'] = true;
+  header("Location: index.php");
 }
 else {
-  echo "<script>window.location = 'src/connect.php';</script>";
+  $_SESSION['showModal'] = false;
+  header("Location: src/connect.php");
 }
 // Fim da validação das variáveis POST
