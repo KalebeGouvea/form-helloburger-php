@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php session_start();
+include 'servicos/servicoValidacao.php';
+include 'servicos/servicoMensagem.php';
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -26,9 +29,9 @@
         </div>
         <div class="modal-body">
 
-            <?php if(isset($_SESSION['erro'])):
-            echo $_SESSION['erro'];
-            endif;?>
+            <?php
+                retornaMensagemErro();
+            ?>
 
         </div>
         <div class="modal-footer">
@@ -63,7 +66,7 @@
             <div class="direita">
                 <h1 class="t1">Registre-se</h1>
 
-                <form action= <?php echo htmlspecialchars("form.php")?> method="post">
+                <form action= <?php echo htmlspecialchars("processa.php")?> method="post">
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputNome">NOME</label>
@@ -159,8 +162,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
 
-    <?php if(isset($_SESSION['showModal']) && $_SESSION['showModal']):?>
+    <?php/* if(isset($_SESSION['showModal']) && $_SESSION['showModal']):?>
     <script>$('#validaModal').modal('show');</script>
-    <?php endif;?>
+    <?php endif;*/?>
+    <script>$('#validaModal').modal('show');</script>
 </body>
 </html>
