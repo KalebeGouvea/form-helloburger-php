@@ -1,6 +1,6 @@
 <?php
 //Arquivo com a mesma finalidade do form.php, apenas reescrito.
-
+session_start();
 include 'servicos/servicoValidacao.php';
 include 'servicos/servicoMensagem.php';
 
@@ -16,12 +16,17 @@ $estado = test_input($_POST['estado']);
 $cidade = test_input($_POST['cidade']);
 $ofertas = test_input($_POST['ofertas']);
 
+validaNome($nome);
+validaSobrenome($snome);
+retornaMensagemErro();
+
 //Validar nome
 if (validaNome($nome) && validaSobrenome($snome)) {
+    $_SESSION['showModal'] = false;
     echo 'Dados validos e pagina segue para o Insert';
 }
 else {
     $_SESSION['showModal'] = true;
-    echo 'Dados invalidos e mensagem de erro foi setada';
-
+    header("Location: index.php");
+    //echo 'Dados invalidos';
 }

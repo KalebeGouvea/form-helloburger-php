@@ -30,7 +30,7 @@ include 'servicos/servicoMensagem.php';
         <div class="modal-body">
 
             <?php
-                retornaMensagemErro();
+                echo $_SESSION['msg'];
             ?>
 
         </div>
@@ -162,9 +162,9 @@ include 'servicos/servicoMensagem.php';
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
 
-    <?php/* if(isset($_SESSION['showModal']) && $_SESSION['showModal']):?>
+    <?php if(isset($_SESSION['showModal']) && $_SESSION['showModal']):?>
     <script>$('#validaModal').modal('show');</script>
-    <?php endif;*/?>
-    <script>$('#validaModal').modal('show');</script>
+    <?php endif;?>
+    
 </body>
 </html>

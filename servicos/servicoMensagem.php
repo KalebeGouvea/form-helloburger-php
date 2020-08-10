@@ -1,21 +1,20 @@
 <?php
-
 //Seta a mensagem de erro
-function setarMensagemErro ($nome, $msg)
+function setarMensagemErro ($arr, $msg)
 {
-    $erro[$nome] = $msg;//SESSION?
+    $_SESSION[$arr] = $msg;//SESSION?
 }
 
 //Retorna a mensagem de erro devidamente formatada para o modal no HTML
 function retornaMensagemErro()
 {
-    if (isset($erro)){
-        foreach ($erro as $x => $x_valor) {
-            $msg = $msg. "<span>$x_valor.</span><br>";
-        }
-        return $msg;
+   //Montar função que retorne todos os SESSIONS formatados para o Modal
+    $msg = '';
+    if (isset($_SESSION['nomeErr'])) {
+        $msg = $msg. "<span>".$_SESSION['nomeErr']."</span><br>";
     }
-    else {
-        return null;
+    if (isset($_SESSION['snomeErr'])) {
+        $msg = $msg. "<span>".$_SESSION['snomeErr']."</span><br>";
     }
+    $_SESSION['msg'] = $msg;
 }

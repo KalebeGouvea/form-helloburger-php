@@ -25,12 +25,13 @@ function validaNome($data) : bool
         return false;
     }
     else {
+        unset($_SESSION['nomeErr']);
         return true;
     }
 }
 
 //Valida sobrenome
-function validaSobreNome($data) : bool
+function validaSobrenome($data) : bool
 {
     if (empty($data)) {
         setarMensagemErro('snomeErr','- Sobrenome é necessário');
@@ -45,6 +46,7 @@ function validaSobreNome($data) : bool
         return false;
     }
     else {
+        unset($_SESSION['snomeErr']);
         return true;
     }
 }
