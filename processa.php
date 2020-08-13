@@ -18,10 +18,20 @@ $ofertas = test_input($_POST['ofertas']);
 
 validaNome($nome);
 validaSobrenome($snome);
+validaEmail($email);
+validaSenha($pwd);
+validaTelefone($fone);
+validaNascimento($bday);
+validaSexo($sex);
+validaEndereco($end);
+validaEstado($estado);
+validaCidade($cidade);
+validaOfertas($ofertas);
+
 retornaMensagemErro();
 
 //Validar nome
-if (validaNome($nome) && validaSobrenome($snome)) {
+if (validaNome($nome) && validaSobrenome($snome) && validaEmail($email) && validaSenha($pwd) && validaTelefone($fone) && validaNascimento($bday) && validaSexo($sex) && validaEndereco($end) && validaEstado($estado) && validaCidade($cidade) && validaOfertas($ofertas)) {
     $_SESSION['showModal'] = false;
     echo 'Dados validos e pagina segue para o Insert';
 }
