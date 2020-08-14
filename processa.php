@@ -1,6 +1,7 @@
 <?php
 //Arquivo com a mesma finalidade do form.php, apenas reescrito.
 session_start();
+require 'src/connect.php';
 include 'servicos/servicoValidacao.php';
 include 'servicos/servicoMensagem.php';
 
@@ -30,11 +31,12 @@ validaOfertas($ofertas);
 
 retornaMensagemErro();
 
-//Validar nome
+//Verifica se os campos são válidos
 if (validaNome($nome) && validaSobrenome($snome) && validaEmail($email) && validaSenha($pwd) && validaTelefone($fone) && validaNascimento($bday) && validaSexo($sex) && validaEndereco($end) && validaEstado($estado) && validaCidade($cidade) && validaOfertas($ofertas)) {
-    $_SESSION['showModal'] = false;
-    echo 'Dados validos e pagina segue para o Insert';
+    require 'src/insert.php';
+    session_unset();
 }
+//Retorna para o index.php e ativa o modal com as mensagens
 else {
     $_SESSION['showModal'] = true;
     header("Location: index.php");
