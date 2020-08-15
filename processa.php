@@ -28,11 +28,12 @@ validaEndereco($end);
 validaEstado($estado);
 validaCidade($cidade);
 validaOfertas($ofertas);
+verificaEmail($email);
 
 retornaMensagemErro();
 
 //Verifica se os campos são válidos
-if (validaNome($nome) && validaSobrenome($snome) && validaEmail($email) && validaSenha($pwd) && validaTelefone($fone) && validaNascimento($bday) && validaSexo($sex) && validaEndereco($end) && validaEstado($estado) && validaCidade($cidade) && validaOfertas($ofertas)) {
+if (validaNome($nome) && validaSobrenome($snome) && validaEmail($email) && validaSenha($pwd) && validaTelefone($fone) && validaNascimento($bday) && validaSexo($sex) && validaEndereco($end) && validaEstado($estado) && validaCidade($cidade) && validaOfertas($ofertas) && verificaEmail($email)) {
     require 'src/insert.php';
     session_unset();
 }

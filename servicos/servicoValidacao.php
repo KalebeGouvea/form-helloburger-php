@@ -245,3 +245,19 @@ function validaOfertas ($data) : bool
         return true;
     }
 }
+
+//Verifica se email existe
+function verificaEmail ($data) : bool
+{
+    $stmt = $GLOBALS['conn']->prepare("SELECT email FROM clientes WHERE email = :email");
+    $stmt->bindParam(':email', $data);
+    $stmt->execute();
+
+    if($stmt->rowCount() > 0){
+        setarMensagemErro('verEmailErr','- O email informado já foi cadastrado');
+        return false;
+    } 
+    else {
+        return true;
+    }
+}

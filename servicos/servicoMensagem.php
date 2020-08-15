@@ -43,5 +43,8 @@ function retornaMensagemErro()
     if (isset($_SESSION['ofertasErr'])) {
         $msg = $msg. "<span>".$_SESSION['ofertasErr']."</span><br>";
     }
+    if (isset($_SESSION['verEmailErr'])) {
+        $msg = $msg. "<span>".$_SESSION['verEmailErr']."</span><br>";
+    }
     $_SESSION['msg'] = $msg;
 }
