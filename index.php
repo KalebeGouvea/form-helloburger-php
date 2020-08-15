@@ -3,20 +3,9 @@ include 'servicos/servicoValidacao.php';
 include 'servicos/servicoMensagem.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/abf89d820e.js" crossorigin="anonymous"></script>
-    <script language="JavaScript" type="text/javascript" src="js/cidades-estados-utf8.js"></script>
-
-    <title>Hello Burger - Cadastro</title>
-</head>
-<body>
+<?php
+include 'header.php';
+?>
     <!-- Modal -->
     <div class="modal fade" id="validaModal" tabindex="-1" aria-labelledby="validaModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -157,14 +146,6 @@ include 'servicos/servicoMensagem.php';
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
-
-    <?php if(isset($_SESSION['showModal']) && $_SESSION['showModal']):?>
-    <script>$('#validaModal').modal('show');</script>
-    <?php endif;?>
-    
-</body>
-</html>
+<?php
+include 'footer.php';
+?>
