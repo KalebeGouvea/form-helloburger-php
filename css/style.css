@@ -362,11 +362,12 @@ legend {
         padding-left: 0;
     }
 
+/* Centralizador vertical de elementos */ 
+    .vertical-center {
+        min-height: 84vh;
+        display: flex;
+        align-items: center;
+    }
+
 }
 
-/* Centralizador vertical de elementos */ 
-.vertical-center {
-    min-height: 84vh;
-    display: flex;
-    align-items: center;
-}
