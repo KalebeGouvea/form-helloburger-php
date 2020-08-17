@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/*------------Layout da pagina--------------*/
+/*############## Layout da pagina ##############*/
 
 .fundo {
     background-color: #3E3E3E;
@@ -20,12 +20,22 @@ body {
 .esquerda {
     background-color: #D75441;
     width: 45%;
+    min-width: 428px;
+    min-height: 698px;
 }
 
 .direita {
     background-color: #252525;
     padding: 30px;
     width: 55%;
+    min-width: 463px;
+}
+
+/* Centralizador vertical de elementos */ 
+.vertical-center {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 /*------------Lado Esquerdo--------------*/
@@ -62,8 +72,9 @@ body {
     margin-right: auto;
 }
 
-/*-------Estilo das mensagens do lado esquerdo---------*/
+/*############## Estilo das mensagens do lado esquerdo ##############*/
 
+/*Estilo das mensagens do bloco esquerdo*/
 .msg1 {
     color: #873226;
     font-weight: bold;
@@ -74,6 +85,7 @@ body {
     line-height: 38px;
 }
 
+/*Estilo das mensagens do bloco esquerdo*/
 .msg2 {
     color: #873226;
     font-weight: bold;
@@ -82,8 +94,20 @@ body {
     margin-left: 13px;
 }
 
-/*------------Lado Direito--------------*/
-/*------------Estilo dos titulos--------------*/
+/*Estilo das mensagens do bloco direito*/
+.msg3 {
+    color: #D75441;
+    font-weight: bold;
+}
+
+/*Estilo das mensagens do bloco direito*/
+.msg4 {
+    color: #D75441;
+    font-size: 20px;
+}
+
+/*############## Lado Direito ##############*/
+/*############## Estilo dos titulos ##############*/
 
 .t1 {
     color: #D75441;
@@ -292,14 +316,14 @@ legend {
     box-shadow: 0 0 0 0.2rem rgba(255, 63, 38, 0.5);
 }
 
-/*--------------Date input icon---------------*/
+/*############## Date input icon ##############*/
 
 ::-webkit-calendar-picker-indicator {
     /*filter: invert(1);*/
     opacity: 0;
 }
 
-/*--------------Layout telas menores---------------*/
+/*############## Layout telas menores ##############*/
 
 @media (max-width: 991.98px) {
     
@@ -311,13 +335,31 @@ legend {
         flex-direction: column;
     }
 
+/*Reset das propriedades dos seletores esquerda e direita*/
     .esquerda, .direita {
         width: auto;
+        min-width: auto;
+        min-height: auto;
+    }
+
+/*Ajuste do bloco esquerdo para ocupar o tamanho vertical da tela*/
+    .esquerda {
+        min-height: 6vh;
+        display: flex;
+        align-items: center;
+        padding-left: 1vh;
+    }
+
+/*Ajuste do bloco direito para ocupar o tamanho vertical da tela*/
+    .direita {
+        min-height: 94vh;
     }
 
     .logo01 {
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
     }
 
 }
