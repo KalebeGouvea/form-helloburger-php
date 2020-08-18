@@ -36,6 +36,7 @@ retornaMensagemErro();
 if (validaNome($nome) && validaSobrenome($snome) && validaEmail($email) && validaSenha($pwd) && validaTelefone($fone) && validaNascimento($bday) && validaSexo($sex) && validaEndereco($end) && validaEstado($estado) && validaCidade($cidade) && validaOfertas($ofertas) && verificaEmail($email)) {
     require 'src/insert.php';
     session_unset();
+    header('Location: sucesso.php');
 }
 //Retorna para o index.php e ativa o modal com as mensagens
 else {

@@ -1,6 +1,7 @@
 <?php session_start();
 include 'servicos/servicoValidacao.php';
 include 'servicos/servicoMensagem.php';
+header("Refresh:3; url=home.php");
 ?>
 
 <?php
