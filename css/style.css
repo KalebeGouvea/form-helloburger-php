@@ -31,6 +31,11 @@ body {
     min-width: 463px;
 }
 
+/* Classe para container do login */
+.login {
+    width: 60%;
+}
+
 /* Centralizador vertical de elementos */ 
 .vertical-center {
     min-height: 100%;
@@ -293,6 +298,7 @@ legend {
     font-weight: bold;
     width: 180px;
     height: 40px;
+    margin-bottom: 1rem;
 }
 
 .btn-laranja:hover {
@@ -314,6 +320,40 @@ legend {
 
 .btn-laranja:not(:disabled):not(.disabled):active:focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 63, 38, 0.5);
+}
+
+.btn-cinza {
+    background-color: #252525;
+    color: #FFFFFF;
+    border-radius: 0;
+    border: 2px solid #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    width: 180px;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.btn-cinza:hover {
+    background-color: #1B1B1B;
+    border: 2px solid #FFFFFF;
+}
+
+.btn-cinza:not(:disabled):not(.disabled).active, .btn-cinza:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: #000000;
+    border-color: #FFFFFF;
+}
+
+.btn-cinza:focus {
+    color: #fff;
+    background-color: #000000;
+    border-color: #FFFFFF;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+.btn-cinza:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
 
 /*############## Date input icon ##############*/
@@ -338,7 +378,7 @@ legend {
 /*Reset das propriedades dos seletores esquerda e direita*/
     .esquerda, .direita {
         width: auto;
-        min-width: auto;
+        min-width: 100vw;
         min-height: auto;
     }
 
@@ -353,6 +393,11 @@ legend {
 /*Ajuste do bloco direito para ocupar o tamanho vertical da tela*/
     .direita {
         min-height: 94vh;
+    }
+
+/*Reset do width do container login*/
+    .login {
+        width: auto;
     }
 
     .logo01 {
