@@ -7,7 +7,7 @@ include 'servicos/servicoMensagem.php';
 include 'header.php';
 ?>
     <!-- Modal -->
-    <div class="modal fade" id="validaModal" tabindex="-1" aria-labelledby="validaModalLabel" aria-hidden="true">
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="validaModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">

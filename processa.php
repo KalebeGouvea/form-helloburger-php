@@ -41,6 +41,6 @@ if (validaNome($nome) && validaSobrenome($snome) && validaEmail($email) && valid
 //Retorna para o index.php e ativa o modal com as mensagens
 else {
     $_SESSION['showModal'] = true;
-    header("Location: index.php");
+    header("Location: cadastro.php");
     //echo 'Dados invalidos';
 }
