@@ -4,6 +4,8 @@ $stmt = $conn->prepare("SELECT * FROM clientes WHERE email = '$email' AND senha 
 $stmt->execute();
 
 if($stmt->rowCount() > 0){
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    setcookie("nome",$result['nome']);
     $_SESSION['showModal'] = false;
     header("Location: home.php");
 } 
