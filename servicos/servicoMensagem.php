@@ -10,6 +10,9 @@ function retornaMensagemErro()
 {
    //Montar função que retorne todos os SESSIONS formatados para o Modal
     $msg = '';
+    if (isset($_SESSION['logErr'])) {
+        $msg = $msg. "<span>".$_SESSION['logErr']."</span><br>";
+    }
     if (isset($_SESSION['nomeErr'])) {
         $msg = $msg. "<span>".$_SESSION['nomeErr']."</span><br>";
     }

@@ -5,6 +5,7 @@
 
     <?php if(isset($_SESSION['showModal']) && $_SESSION['showModal']):?>
     <script>$('#validaModal').modal('show');</script>
+    <script>$('#loginModal').modal('show');</script>
     <?php endif;?>
     
 </body>
